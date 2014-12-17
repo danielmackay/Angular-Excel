@@ -5,4 +5,4 @@
 /// <reference path="jquery-1.9.0.js" />
 /// <reference path="npm.js" />
 /// <reference path="../app/app.js" />
-/// <reference path="../app/excel/excel.js" />
+/// <reference path="../app/grid/grid.js" />

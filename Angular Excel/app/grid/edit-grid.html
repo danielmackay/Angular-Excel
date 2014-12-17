@@ -1,0 +1,17 @@
+﻿<table class="table">
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+    </tr>
+
+    <tr ng-repeat="attribute in attributes">
+        <td class="col-md-6">
+            <select ng-model="attribute.id" ng-options="type.id as type.name for type in attributeTypes" class="form-control">
+                <option value="">Select Attribute</option>
+            </select>
+        </td>
+        <td class="col-md-6">
+            <input type="text" ng-model="attribute.value" class="form-control" />
+        </td>
+    </tr>
+</table>

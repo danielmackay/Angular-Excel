@@ -1,0 +1,16 @@
+﻿<table class="table">
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+    </tr>
+
+    <tr ng-repeat="attribute in attributes">
+        <td class="col-md-6">
+            <!-- todo: display attribute type name -->
+            <label>{{attribute.id}}</label>
+        </td>
+        <td class="col-md-6">
+            <label>{{attribute.value}}</label>
+        </td>
+    </tr>
+</table>

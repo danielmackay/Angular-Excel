@@ -1,12 +1,15 @@
 ﻿(function () {
     'use strict';
 
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['grid']);
 
     app.controller('appCtrl', appCtrl);
 
     function appCtrl() {
         var self = this;
+
+        self.showView = true;
+        self.showEdit = false;
 
         self.attributes = [
             {
@@ -19,27 +22,21 @@
             }
         ];
 
-        self.attributeTypes = [
-            {
-                name: 'red',
-                id: 1
-            },
-            {
-                name: 'blue',
-                id: 2
-            },
-            {
-                name: 'green',
-                id: 3
-            }
-        ];
-
-        self.addAttribute = function() {
+        self.addAttribute = function () {
             self.attributes.push({});
         }
 
-        self.save = function() {
-            alert('saved');
+        self.save = function () {
+            toggleState();
         }
-    }
+
+        self.edit = function () {
+            toggleState();
+        }
+
+        function toggleState() {
+            self.showView = !self.showView;
+            self.showEdit = !self.showEdit;
+        }
+    }    
 })();
